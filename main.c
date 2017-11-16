@@ -4,8 +4,7 @@
 #include <ctype.h>
 int main()  {
 
-  // På grund av tidsbrist fick jag använda mig av 2st dump chars.
-  char string[100],dump[100],dump2[100],calc;
+  char string[100],dump[100],calc;
   int x=0,y=0,i=0,ii=0;
   printf("Skriv in vad du vill r\x84kna ut. T.ex. 2+2 eller 3*4\n");
   // Läser in till char string
@@ -22,10 +21,10 @@ int main()  {
   calc=string[i];
   i++;
   for (;string[i] >='0' && string[i] <= '9';i++,ii++) {
-    dump2[ii]=string[i];
+    dump[ii]=string[i];
   }
-  dump2[ii]='\0';
-  y=atoi(dump2);
+  dump[ii]='\0';
+  y=atoi(dump);
   // Kontrollerar vilket räknesätt som skall användas.
   switch(calc)  {
     case '+':
